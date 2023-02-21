@@ -1,8 +1,8 @@
 # QUICK ORDER COMPONENT
 
-Este es un componente personalizado que permite realizar una compra rápida ingresando el SKU de un producto de la tienda.
+This is a custom component that allows you to make a quick purchase by entering the SKU of a store product.
 
-En este componente se trabajó con las siguientes tecnologías:
+In this component we worked with the following technologies:
 
 - Vtex.
 - React.
@@ -10,19 +10,21 @@ En este componente se trabajó con las siguientes tecnologías:
 - Typescript.
 - Css.
 
+## Component's image.
+
 ![Quick order desktop-README](https://user-images.githubusercontent.com/87024446/219821711-4fb00083-7abd-4d8d-9737-eeb8badfa373.png)
 
 ## Configuration 
 
-### Paso 1 - Clonar
+## Step 1 - Clone.
 
 Realizar la clonación del siguiente repositorio:
-- [Repositorio](https://github.com/Yesiblato/itgloberspartnercl-quick-order)
+- [Repository](https://github.com/Yesiblato/itgloberspartnercl-quick-order)
 
-### Paso 2 - Editar el Manifest.json 
+## Step 2 - Edit the Manifest.json.
 
-Ingresar al archivo manifest.json y realizar las siguentes modificaciones en: `vendor`, `name`, `version`, `title` y `description`
-como se muestra en el siguiente ejemplo: 
+Enter the manifest.json file and make the following changes to: `vendor`, `name`, `version`, `title` and `description`
+as shown in the following example:
 
 ```js
 {
@@ -33,7 +35,7 @@ como se muestra en el siguiente ejemplo:
   "description": "Input que permitirá una compra rápida en mi sitio VTEX IO"
 }
 ```
-Además, verifique que el archivo cuente con los siguientes builders: 
+Also, check that the file has the following builders and the dependencies:
 
 ```js
   "builders": {
@@ -43,34 +45,60 @@ Además, verifique que el archivo cuente con los siguientes builders:
     "store": "0.x"
   }
 ```
-### Paso 3 - Instalar node-modules
 
-Para realizar esta instalación de node-modules, debe estar ubicado en la carpeta de `react` de la aplicación y ejecutar el comando `yarn`, y tendrá instaladas todas las dependencias necesarias para usar esta plantilla.
+### Dependencies.
 
-### Paso 4 - Ejecutar el preview
+1. "vtex.css-handles": "0.x"
+2. "vtex.checkout-graphql": "0.x",
+3. "vtex.search-graphql": "0.x", 
 
-Despues de realizar los pasos anteriores puede verificar si su componente está funcionando ejecutando el comando `vtex link` si todo funciona correctamente deberá ver en consola `Sending locale change event`.
 
-Si la consola muestra algún error, por favor verificar los pasos anteriores y vuelva a ejecutar `vtex link`.
+## Step 3 - Install node-modules.
 
-### Paso 5 - Implementar el componente
+To carry out this installation of Node-Modules, it must be located in the `react` folder of the application and execute the `yarn` command, and will have all the necessary units to use this template installed.
 
-Por último, para utilizar el componente debe agregarlo a las `dependencies` en el `manifest.json` de su tienda (store-theme) de la siguiente manera:
+## Step 4 - Execute the preview.
+
+After performing the previous steps you can verify if its component is running by running the `Vtex Link` command if everything works correctly should see in` Sending locale change event`.
+
+If the console shows any error, please verify the previous steps and re -execute `vtex link`.
+
+## Step 5 - Deploy the component
+
+Finally, to use the component you must add it to the `dependencies` in the `manifest.json` of your store (store-theme) as follows:
 
 - vendor.name : version. 
 
-Por ejemplo: 
+For example:
 ```js
   "dependencies": {
      "itgloberspartnercl.quick-order": "0.x"
   }
 ```
+### We call it in the store theme in a flex layout to see it.
+```js
+  "flex-layout.col#container__samSmith": {
+    "title": "container__samSmith--col",
+    "children": [
+      "quick-order"
+    ]
+  }
+```
 
-## Dependencies
+## Customization
 
-1. "vtex.css-handles": "0.x"
-2. "vtex.checkout-graphql": "0.x",
-3. "vtex.search-graphql": "0.x", 
+In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on 
+
+| CSS Handles |
+| ----------- | 
+| `containerPrincipal__quickOrder` | 
+| `container__quickOrder` | 
+| `title__quickOrder` | 
+| `label__quickOrder` | 
+| `inputSku__quickOrder` |
+| `"inputSubmit__quickOrder"` | 
+| `options__quickOrder` |
+
 
 ## Contributors ✨
 
