@@ -26,8 +26,6 @@ const QuickOrder = () => {
     "inputSku__quickOrder",
     "inputSubmit__quickOrder",
     "options__quickOrder"
-    // "options__department",
-    // "container__items"
   ]
   const handles = useCssHandles(CSS_HANDLES)
 
